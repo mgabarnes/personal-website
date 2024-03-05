@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.21572dca.css",
-    "main.js": "/static/js/main.9a8202ce.js",
+    "main.js": "/static/js/main.772af539.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/fabricatedpcb.png": "/static/media/fabricatedpcb.7e41a07d2b368baa0e7f.png",
-    "static/media/michaelabarnes.jpg": "/static/media/michaelabarnes.fb5be682259042087825.jpg",
     "static/media/fabricatedpcb.jpg": "/static/media/fabricatedpcb.75c317503e28382113ad.jpg",
     "static/media/interior.jpeg": "/static/media/interior.2ebf7c1ed3d405e140ab.jpeg",
     "static/media/SchematicPage1.jpg": "/static/media/SchematicPage1.79be81505536a1dc03cf.jpg",
+    "static/media/michaelabarnes.jpeg": "/static/media/michaelabarnes.c2ea400e01f2abb9ae9a.jpeg",
     "static/media/connector.jpeg": "/static/media/connector.54541de924b642e636ef.jpeg",
     "static/media/exterior.jpeg": "/static/media/exterior.0db44a3bb1cf92edc637.jpeg",
     "static/media/dashboard.jpeg": "/static/media/dashboard.09124ec30ad26b080eb0.jpeg",
@@ -29,11 +29,11 @@
     "static/media/Liberty-Defense-Logo-Lg.png": "/static/media/Liberty-Defense-Logo-Lg.cacf240ec87afca07404.png",
     "index.html": "/index.html",
     "main.21572dca.css.map": "/static/css/main.21572dca.css.map",
-    "main.9a8202ce.js.map": "/static/js/main.9a8202ce.js.map",
+    "main.772af539.js.map": "/static/js/main.772af539.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21572dca.css",
-    "static/js/main.9a8202ce.js"
+    "static/js/main.772af539.js"
   ]
 }
