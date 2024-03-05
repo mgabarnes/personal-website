@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="source-code">
         <a
-          href="https://github.com/camerong888/cameron-gordons-website"
+          href="https://github.com/mgabarnes/personal-website"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -39,7 +39,7 @@ function App() {
                   <Projects />
                   <WorkExperience />
                   <Education />
-                  <Contact />
+                  {/* <Contact /> */}
                 </main>
               }
               index
@@ -128,7 +128,7 @@ function App() {
             />
           </Routes>
         </div>
-        <Footer />
+        <Contact />
       </Router>
     </div>
   );
