@@ -6,37 +6,14 @@ function Projects() {
   return (
     <div className="projects-container">
       <section id="projects" className="projects">
-      <h2 className="projects-title">Writing</h2>
+        <h2 className="projects-title">Writing</h2>
         <ul style={{ listStyleType: "none" }}>
           <li>
             <h3>
-              <Link to="/iridiumiotembeddeddevice">Title of Piece 1</Link>
+              <Link to="/stealingparis">Stealing Paris</Link>
             </h3>
-            <p>Short sub description</p>
-          </li>
-          <li>
-            <h3>
-              <Link to="/smarthand">Title of Piece 2</Link>
-            </h3>
-            <p>Short sub description</p>
-          </li>
-          <li>
-            <h3>
-              <Link to="/tcb">Title of Piece 3</Link>
-            </h3>
-            <p>Short sub description</p>
-          </li>
-          <li>
-            <h3>
-              <Link to="/dashboard">Title of Piece 4</Link>
-            </h3>
-            <p>Short sub description</p>
-          </li>
-          <li>
-            <h3>
-              <Link to="/charger">Title of Piece 5</Link>
-            </h3>
-            <p>Short sub description</p>
+            <p>May 6, 2023</p>
+            <p>Published on the Long River Review</p>
           </li>
         </ul>
       </section>

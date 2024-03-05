@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import "./globalStyles.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import SmartHand from "./components/projects/SmartHandProject";
-import IridiumIoTEmbeddedDevice from "./components/projects/IridiumIoTEmbeddedDevice";
+import StealingParis from "./components/projects/StealingParis";
 import TelemetryCommunicationBoard from "./components/projects/TelemetryCommunicationBoard";
 import DashboardProject from "./components/projects/DashboardProject";
 import ChargerProject from "./components/projects/ChargerProject";
@@ -46,10 +46,10 @@ function App() {
               
             />
             <Route
-              path="/iridiumiotembeddeddevice"
+              path="/stealingparis"
               element={
                 <main>
-                  <IridiumIoTEmbeddedDevice />
+                  <StealingParis />
                 </main>
               }
               index
