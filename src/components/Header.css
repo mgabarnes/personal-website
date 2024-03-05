@@ -1,0 +1,131 @@
+.header-container {
+  background-color: #003f5c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.header-container a {
+  text-decoration: none;
+}
+
+.header-container a.header-title {
+  position: relative;
+  color: #00a8e8;
+}
+
+.header-container a.header-title:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #00a8e8;
+}
+
+.header-nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #00a8e8;
+}
+
+.header-container.open .header-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #00a8e8;
+  margin: 0;
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.header-nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #00a8e8;
+  text-decoration: none;
+}
+
+/* .header-nav-link:hover {
+  text-decoration: underline;
+} */
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    position: absolute;
+    background-color: #003f5c;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+    /* Add this line to hide the buttons by default */
+  }
+
+  .header-container.open .header-nav {
+    display: flex;
+    /* Add this line to show the buttons when the menu is expanded */
+  }
+
+  .header-nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-container.open+.content {
+    margin-top: 220px;
+  }
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #00a8e8;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .nav.nav-open {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
