@@ -51,19 +51,10 @@ function Header() {
           <li className="header-nav-item">
             <Link
               className="header-nav-link"
-              onClick={() => handleNavigation("/", "education")}
-              to="/#education"
-            >
-              Education
-            </Link>
-          </li>
-          <li className="header-nav-item">
-            <Link
-              className="header-nav-link"
               onClick={() => handleNavigation("/", "projects")}
               to="/#projects"
             >
-              Projects
+              Writing
             </Link>
           </li>
           <li className="header-nav-item">
@@ -73,6 +64,15 @@ function Header() {
               to="/#work-experience"
             >
               Work Experience
+            </Link>
+          </li>
+          <li className="header-nav-item">
+            <Link
+              className="header-nav-link"
+              onClick={() => handleNavigation("/", "education")}
+              to="/#education"
+            >
+              Education
             </Link>
           </li>
           <li className="header-nav-item">
