@@ -22,7 +22,7 @@ function Header() {
 
   return (
     <header className={`header-container${menuOpen ? " open" : ""}`}>
-      <Link onClick={() => handleNavigation("/", "home")} to="/home">
+      <Link onClick={() => handleNavigation("/", "home")} to="/#home">
         <h1 className="header-title">Michaela Barnes</h1>
       </Link>
       <span className="menu-toggle" onClick={handleMenuToggle}>
@@ -34,7 +34,7 @@ function Header() {
             <Link
               className="header-nav-link"
               onClick={() => handleNavigation("/", "home")}
-              to="/home"
+              to="/#home"
             >
               Home
             </Link>
@@ -43,7 +43,7 @@ function Header() {
             <Link
               className="header-nav-link"
               onClick={() => handleNavigation("/", "projects")}
-              to="/projects"
+              to="/#projects"
             >
               Projects
             </Link>
@@ -52,7 +52,7 @@ function Header() {
             <Link
               className="header-nav-link"
               onClick={() => handleNavigation("/", "work-experience")}
-              to="/work-experience"
+              to="/#work-experience"
             >
               Work Experience
             </Link>
@@ -61,7 +61,7 @@ function Header() {
             <Link
               className="header-nav-link"
               onClick={() => handleNavigation("/", "about")}
-              to="/about"
+              to="/#about"
             >
               About
             </Link>
@@ -70,7 +70,7 @@ function Header() {
             <Link
               className="header-nav-link"
               onClick={() => handleNavigation("/", "contact")}
-              to="/contact"
+              to="/#contact"
             >
               Contact
             </Link>
