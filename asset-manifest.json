@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d9cd162.css",
-    "main.js": "/static/js/main.9be958ed.js",
+    "main.css": "/static/css/main.21572dca.css",
+    "main.js": "/static/js/main.001ad66f.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
-    "static/media/camerongordon.jpg": "/static/media/camerongordon.5559c06edb5960826220.jpg",
     "static/media/fabricatedpcb.png": "/static/media/fabricatedpcb.7e41a07d2b368baa0e7f.png",
+    "static/media/michaelabarnes.jpg": "/static/media/michaelabarnes.fb5be682259042087825.jpg",
     "static/media/fabricatedpcb.jpg": "/static/media/fabricatedpcb.75c317503e28382113ad.jpg",
     "static/media/interior.jpeg": "/static/media/interior.2ebf7c1ed3d405e140ab.jpeg",
     "static/media/SchematicPage1.jpg": "/static/media/SchematicPage1.79be81505536a1dc03cf.jpg",
@@ -28,12 +28,12 @@
     "static/media/NxStage.png": "/static/media/NxStage.97f30a3b4928b1aaa8b1.png",
     "static/media/Liberty-Defense-Logo-Lg.png": "/static/media/Liberty-Defense-Logo-Lg.cacf240ec87afca07404.png",
     "index.html": "/index.html",
-    "main.0d9cd162.css.map": "/static/css/main.0d9cd162.css.map",
-    "main.9be958ed.js.map": "/static/js/main.9be958ed.js.map",
+    "main.21572dca.css.map": "/static/css/main.21572dca.css.map",
+    "main.001ad66f.js.map": "/static/js/main.001ad66f.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d9cd162.css",
-    "static/js/main.9be958ed.js"
+    "static/css/main.21572dca.css",
+    "static/js/main.001ad66f.js"
   ]
 }
