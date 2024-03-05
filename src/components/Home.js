@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="home-container">
       <section id="home" className="home">
-        <h2 className="home-title">Welcome to my personal website!</h2>
+        <h2 className="home-title">Welcome!</h2>
         <img
           src={profilePicture}
           alt="Michaela Barnes"

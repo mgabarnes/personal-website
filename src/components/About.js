@@ -7,13 +7,14 @@ function About() {
       <section id="about" className="about">
         <h2 className="about-title">About</h2>
         <p>
-          This is the about me section.
-        </p>
-        <p>
-          It will contain information about me, my background, and my writing works. 
-        </p>
-        <p>
-          Thanks for checking my website out!
+          I am a writer of essays and short stories. I earned a
+          B.S. in Television and Film Production from Syracuse University and 
+          worked as a Field Producer in Public Television in Boston and San
+          Francisco. I was also an IACUC board member at Takeda
+          Pharmaceuticals, and a substitute elementary school teacher. I
+          no longer shoplift but instead sculpt the human figure, work on
+          being a better environmentalist, lift weights and edit my kids’
+          essays when they allow it.
         </p>
       </section>
     </div>

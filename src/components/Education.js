@@ -22,6 +22,36 @@ function Education() {
             <h3>
               <Link to="/Tesla">
                 {" "}
+                Stanford Continuing Education
+              </Link>
+            </h3>
+            <p>Length of time...</p>
+            <p>Location...</p>
+          </li>
+          <li>
+            <h3>
+              <Link to="/Tesla">
+                {" "}
+                Hugo House
+              </Link>
+            </h3>
+            <p>Length of time...</p>
+            <p>Location...</p>
+          </li>
+          <li>
+            <h3>
+              <Link to="/Tesla">
+                {" "}
+                One Story
+              </Link>
+            </h3>
+            <p>Length of time...</p>
+            <p>Location...</p>
+          </li>
+          <li>
+            <h3>
+              <Link to="/Tesla">
+                {" "}
                 Palais Universitaire, Strasbourg, France
               </Link>
             </h3>
