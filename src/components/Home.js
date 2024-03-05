@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import profilePicture from "../assets/michaelabarnes.jpg";
+import profilePicture from "../assets/michaelabarnes.jpeg";
 
 function Home() {
   return (
