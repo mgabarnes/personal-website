@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import WorkExperience from "./components/WorkExperience";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Education from "./components/Education"
 import Footer from "./components/Footer";
 import "./globalStyles.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
@@ -20,6 +21,7 @@ import Tesla from "./components/workexperience/Tesla";
 import LibertyDefense from "./components/workexperience/LibertyDefense";
 import ScrollToTop from "./ScrollToTop";
 
+
 function App() {
   return (
     <div className="App">
@@ -33,9 +35,10 @@ function App() {
               element={
                 <main>
                   <Home />
+                  <About />
+                  <Education />
                   <Projects />
                   <WorkExperience />
-                  <About />
                   <Contact />
                 </main>
               }

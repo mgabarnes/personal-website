@@ -6,37 +6,37 @@ function Projects() {
   return (
     <div className="projects-container">
       <section id="projects" className="projects">
-      <h2 className="projects-title">Projects</h2>
+      <h2 className="projects-title">Writing</h2>
         <ul style={{ listStyleType: "none" }}>
           <li>
             <h3>
-              <Link to="/iridiumiotembeddeddevice"> Iridium IoT Embedded Device</Link>
+              <Link to="/iridiumiotembeddeddevice">Title of Piece 1</Link>
             </h3>
-            <p>2023 Personal Embedded Device Project</p>
+            <p>Short sub description</p>
           </li>
           <li>
             <h3>
-              <Link to="/smarthand">SmartHand Embedded Device</Link>
+              <Link to="/smarthand">Title of Piece 2</Link>
             </h3>
-            <p>2023 Personal Embedded Device Project</p>
+            <p>Short sub description</p>
           </li>
           <li>
             <h3>
-              <Link to="/tcb">Telemetry Communication Board</Link>
+              <Link to="/tcb">Title of Piece 3</Link>
             </h3>
-            <p>2023 NER Competition Year</p>
+            <p>Short sub description</p>
           </li>
           <li>
             <h3>
-              <Link to="/dashboard"> EV Dashboard/Control</Link>
+              <Link to="/dashboard">Title of Piece 4</Link>
             </h3>
-            <p>2022 NER Competition Year</p>
+            <p>Short sub description</p>
           </li>
           <li>
             <h3>
-              <Link to="/charger"> EV Charger</Link>
+              <Link to="/charger">Title of Piece 5</Link>
             </h3>
-            <p>2021 NER Competition Year</p>
+            <p>Short sub description</p>
           </li>
         </ul>
       </section>

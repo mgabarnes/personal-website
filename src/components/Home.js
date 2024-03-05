@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import profilePicture from "../assets/camerongordon.jpg";
+import profilePicture from "../assets/michaelabarnes.jpg";
 
 function Home() {
   return (
@@ -9,11 +9,11 @@ function Home() {
         <h2 className="home-title">Welcome to my personal website!</h2>
         <img
           src={profilePicture}
-          alt="Cameron Gordon"
+          alt="Michaela Barnes"
           className="profile-picture"
         />
         <p>
-          Here, you can learn more about my background, view my projects, and
+          Here, you can learn more about my background, view my writing, and
           get in touch with me.
         </p>
       </section>

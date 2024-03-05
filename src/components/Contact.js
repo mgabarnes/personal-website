@@ -2,10 +2,9 @@ import React from "react";
 import "./Contact.css";
 
 function Contact() {
-  const personalEmail = "camerong888" + "@" + "gmail.com";
-  const educationalEmail = "gordon.ca" + "@" + "northeastern.edu";
-  const linkedInUrl = "https://" + "www.linkedin.com" + "/in/gordonca/";
-  const githubUrl = "https://" + "www.github.com" + "/camerong888";
+  const personalEmail = "mgabarnes" + "@" + "gmail.com";
+  const linkedInUrl = "https://" + "www.linkedin.com" + "/in/michaela-barnes-41478295/";
+  const instagramURL = "https://" + "www.instagram.com" + "/mibarnesg/";
 
   return (
     <div className="contact-container">
@@ -13,23 +12,19 @@ function Contact() {
         <h2 className="contact-title">Contact</h2>
         <ul style={{ listStyleType: "none" }}>
           <li>
-            Personal: <a href={`mailto:${personalEmail}`}>{personalEmail}</a>
-          </li>
-          <li>
-            Educational:{" "}
-            <a href={`mailto:${educationalEmail}`}>{educationalEmail}</a>
+            Email: <a href={`mailto:${personalEmail}`}>{personalEmail}</a>
           </li>
         </ul>
         <p>
-          LinkedIn:{" "}
-          <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
-            {linkedInUrl}
+        Instagram:{" "}
+          <a href={instagramURL} target="_blank" rel="noopener noreferrer">
+            {instagramURL}
           </a>
         </p>
         <p>
-          GitHub:{" "}
-          <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-            {githubUrl}
+        LinkedIn:{" "}
+          <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
+            {linkedInUrl}
           </a>
         </p>
       </section>

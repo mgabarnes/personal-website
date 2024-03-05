@@ -12,41 +12,21 @@ function WorkExperience() {
             <h3>
               <Link to="/Tesla">
                 {" "}
-                Display Electrical Engineering Internship at Tesla
+                Community Consultant, IACUC Board Member
               </Link>
             </h3>
-            <p>Jan 2022 - Aug 2022</p>
-            <p>Palo Alto, CA</p>
+            <p>2013 - 2019 · 6 years</p>
+            <p>Takeda (formerly Shire) Pharmceuticals, Cambridge, MA · Self-employed</p>
           </li>
           <li>
             <h3>
               <Link to="/Fresenius">
                 {" "}
-                R&D Electrical Engineering Internship at Fresenius Medical Care
+                Field Producer, Frontline, NOVA, National Programming
               </Link>
             </h3>
-            <p>Jan 2021 - Aug 2021</p>
-            <p>Lawrence, MA</p>
-          </li>
-          <li>
-            <h3>
-              <Link to="/libertydefense">
-                {" "}
-                Altium Designer Consultant at Liberty Defense
-              </Link>
-            </h3>
-            <p>May 2023 - June 2023</p>
-            <p>Wilmington, MA</p>
-          </li>
-          <li>
-            <h3>
-              <Link to="/NER">
-                {" "}
-                Electrical Project Lead at Northeastern Electric Racing (NER)
-              </Link>
-            </h3>
-            <p>Sep 2019 - Aug 2023</p>
-            <p>Boston, MA</p>
+            <p>1990 - 2000 · 10 yrs</p>
+            <p>WGBH</p>
           </li>
         </ul>
       </section>
