@@ -7,18 +7,20 @@ import WorkExperience from "./components/WorkExperience";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Education from "./components/Education"
-import Footer from "./components/Footer";
 import "./globalStyles.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import SmartHand from "./components/projects/SmartHandProject";
 import StealingParis from "./components/projects/StealingParis";
-import TelemetryCommunicationBoard from "./components/projects/TelemetryCommunicationBoard";
-import DashboardProject from "./components/projects/DashboardProject";
-import ChargerProject from "./components/projects/ChargerProject";
-import NER from "./components/workexperience/NER";
-import Fresenius from "./components/workexperience/Fresenius";
-import Tesla from "./components/workexperience/Tesla";
-import LibertyDefense from "./components/workexperience/LibertyDefense";
+
+import Takeda from "./components/workexperience/Takeda";
+import WGBH from "./components/workexperience/WGBH";
+
+import GrubStreet from "./components/education/GrubStreet";
+import Stanford from "./components/education/Stanford";
+import HugoHouse from "./components/education/HugoHouse";
+import OneStory from "./components/education/OneStory";
+import Palais from "./components/education/Palais";
+import Syracuse from "./components/education/Syracuse";
+
 import ScrollToTop from "./ScrollToTop";
 
 
@@ -55,73 +57,73 @@ function App() {
               index
             />
             <Route
-              path="/smarthand"
+              path="/takeda"
               element={
                 <main>
-                  <SmartHand />
+                  <Takeda />
                 </main>
               }
               index
             />
             <Route
-              path="/tcb"
+              path="/wgbh"
               element={
                 <main>
-                  <TelemetryCommunicationBoard />
+                  <WGBH />
                 </main>
               }
               index
             />
             <Route
-              path="/dashboard"
+              path="/grubstreet"
               element={
                 <main>
-                  <DashboardProject />
+                  <GrubStreet />
                 </main>
               }
               index
             />
             <Route
-              path="/charger"
+              path="/stanford"
               element={
                 <main>
-                  <ChargerProject />
+                  <Stanford />
                 </main>
               }
               index
             />
             <Route
-              path="/libertydefense"
+              path="/hugohouse"
               element={
                 <main>
-                  <LibertyDefense />
+                  <HugoHouse />
                 </main>
               }
               index
             />
             <Route
-              path="/ner"
+              path="/onestory"
               element={
                 <main>
-                  <NER />
+                  <OneStory />
                 </main>
               }
               index
             />
             <Route
-              path="/tesla"
+              path="/palais"
               element={
                 <main>
-                  <Tesla />
+                  <Palais />
                 </main>
               }
               index
             />
             <Route
-              path="/fresenius"
+              path="/syracuse"
               element={
                 <main>
-                  <Fresenius />
+                  <Syracuse />
                 </main>
               }
               index

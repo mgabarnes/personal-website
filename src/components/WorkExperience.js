@@ -10,7 +10,7 @@ function WorkExperience() {
         <ul style={{ listStyleType: "none" }}>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/takeda">
                 {" "}
                 Community Consultant, IACUC Board Member
               </Link>
@@ -20,7 +20,7 @@ function WorkExperience() {
           </li>
           <li>
             <h3>
-              <Link to="/Fresenius">
+              <Link to="/wgbh">
                 {" "}
                 Field Producer, Frontline, NOVA, National Programming
               </Link>

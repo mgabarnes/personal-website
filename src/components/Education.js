@@ -10,7 +10,7 @@ function Education() {
         <ul style={{ listStyleType: "none" }}>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/grubstreet">
                 {" "}
                 Grub Street
               </Link>
@@ -20,7 +20,7 @@ function Education() {
           </li>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/stanford">
                 {" "}
                 Stanford Continuing Education
               </Link>
@@ -30,7 +30,7 @@ function Education() {
           </li>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/hugohouse">
                 {" "}
                 Hugo House
               </Link>
@@ -40,7 +40,7 @@ function Education() {
           </li>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/onestory">
                 {" "}
                 One Story
               </Link>
@@ -50,7 +50,7 @@ function Education() {
           </li>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/palais">
                 {" "}
                 Palais Universitaire, Strasbourg, France
               </Link>
@@ -60,7 +60,7 @@ function Education() {
           </li>
           <li>
             <h3>
-              <Link to="/Tesla">
+              <Link to="/syracuse">
                 {" "}
                 S.I. Newhouse School of Public Communications at Syracuse University
               </Link>
