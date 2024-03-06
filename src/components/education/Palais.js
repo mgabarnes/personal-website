@@ -14,7 +14,7 @@ function Palais(props) {
       <ul>
         <li>Information...</li>
         <li>
-          See more about Grub Street:{" "}
+          See more about Palais:{" "}
           <a href={PalaisUrl} target="_blank" rel="noopener noreferrer">
             {PalaisUrl}
           </a>

@@ -14,7 +14,7 @@ function Syracuse(props) {
       <ul>
         <li>Information...</li>
         <li>
-          See more about Grub Street:{" "}
+          See more about Syracuse:{" "}
           <a href={SyracuseUrl} target="_blank" rel="noopener noreferrer">
             {SyracuseUrl}
           </a>
