@@ -6,7 +6,7 @@ function WorkExperience() {
   return (
     <div className="workexperience-container">
       <section id="work-experience" className="workexperience">
-        <h2 className="workexperience-title">Work Experience</h2>
+        <h2 className="workexperience-title">Experience</h2>
         <ul style={{ listStyleType: "none" }}>
           <li>
             <h3>
