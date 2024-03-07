@@ -11,6 +11,8 @@ import Footer from "./components/Footer"
 import "./globalStyles.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
+import PhotoGallery from "./components/PhotoGallery";
+
 import StealingParis from "./components/projects/StealingParis";
 
 import Takeda from "./components/workexperience/Takeda";
@@ -45,6 +47,7 @@ function App() {
                   <Projects />
                   <WorkExperience />
                   <Education />
+                  <PhotoGallery />
                 </main>
               }
               index
