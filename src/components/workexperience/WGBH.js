@@ -2,13 +2,13 @@ import React from "react";
 import "./WGBH.css";
 import WGBHLogo from "../../assets/wgbh/WGBHLogo.png";
 
-function Tesla(props) {
+function WGBH(props) {
   const WGBHUrl = "https://" + "www.wgbh.org/";
   return (
     <div className="wgbh">
       <h1> Field Producer, Frontline, NOVA, National Programming </h1>
-      <p>1990 - 2000 · 10 yrs</p>
-      <p>WGBH</p>
+      <p>1990 - 2000</p>
+      <p>WGBH, Boston, MA</p>
       <img src={WGBHLogo} alt="logo" className="logo-picture" />
       <p>Here's some information about the experience:</p>
       <ul>
@@ -24,4 +24,4 @@ function Tesla(props) {
   );
 }
 
-export default Tesla;
+export default WGBH;

@@ -8,7 +8,7 @@ function Education() {
       <section id="education" className="education">
         <h2 className="education-title">Education</h2>
         <ul style={{ listStyleType: "none" }}>
-          <li>
+          {/* <li>
             <h3>
               <Link to="/grubstreet">
                 {" "}
@@ -17,7 +17,7 @@ function Education() {
             </h3>
             <p>Length of time...</p>
             <p>Location...</p>
-          </li>
+          </li> */}
           <li>
             <h3>
               <Link to="/stanford">
@@ -25,17 +25,16 @@ function Education() {
                 Stanford Continuing Education
               </Link>
             </h3>
-            <p>Length of time...</p>
-            <p>Location...</p>
+            {/* <p>Length of time...</p> */}
+            <p>Stanford University</p>
           </li>
-          <li>
+          {/* <li>
             <h3>
               <Link to="/hugohouse">
                 {" "}
                 Hugo House
               </Link>
             </h3>
-            <p>Length of time...</p>
             <p>Location...</p>
           </li>
           <li>
@@ -45,28 +44,27 @@ function Education() {
                 One Story
               </Link>
             </h3>
-            <p>Length of time...</p>
             <p>Location...</p>
-          </li>
+          </li> */}
           <li>
             <h3>
               <Link to="/palais">
                 {" "}
-                Palais Universitaire, Strasbourg, France
+                Palais Universitaire
               </Link>
             </h3>
-            <p>Length of time...</p>
-            <p>Location...</p>
+            {/* <p>Length of time...</p> */}
+            <p>Strasbourg, France</p>
           </li>
           <li>
             <h3>
               <Link to="/syracuse">
                 {" "}
-                S.I. Newhouse School of Public Communications at Syracuse University
+                S.I. Newhouse School of Public Communications
               </Link>
             </h3>
-            <p>Length of time...</p>
-            <p>Location...</p>
+            {/* <p>Length of time...</p> */}
+            <p>Syracuse University</p>
           </li>
         </ul>
       </section>

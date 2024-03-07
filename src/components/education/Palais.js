@@ -6,9 +6,9 @@ function Palais(props) {
   const PalaisUrl = "https://" + "int.strasbourg.eu/place/-/entity/sig/1004_CUL_155";
   return (
     <div className="palais">
-      <h1> Palais </h1>
-      <p>Length of Time...</p>
-      <p>Location...</p>
+      <h1> Palais Universitaire</h1>
+      {/* <p>Length of Time...</p> */}
+      <p>Strasbourg, France</p>
       <img src={PalaisLogo} alt="logo" className="logo-picture" />
       <p>Here's some information about the experience:</p>
       <ul>

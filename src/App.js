@@ -13,6 +13,8 @@ import StealingParis from "./components/projects/StealingParis";
 
 import Takeda from "./components/workexperience/Takeda";
 import WGBH from "./components/workexperience/WGBH";
+import Teacher from "./components/workexperience/Teacher";
+import Volunteer from "./components/workexperience/Volunteer";
 
 import GrubStreet from "./components/education/GrubStreet";
 import Stanford from "./components/education/Stanford";
@@ -57,10 +59,28 @@ function App() {
               index
             />
             <Route
+              path="/teacher"
+              element={
+                <main>
+                  <Teacher />
+                </main>
+              }
+              index
+            />
+            <Route
               path="/takeda"
               element={
                 <main>
                   <Takeda />
+                </main>
+              }
+              index
+            />
+            <Route
+              path="/volunteer"
+              element={
+                <main>
+                  <Volunteer />
                 </main>
               }
               index

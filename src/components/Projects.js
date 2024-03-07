@@ -13,7 +13,7 @@ function Projects() {
               <Link to="/stealingparis">Stealing Paris</Link>
             </h3>
             <p>May 6, 2023</p>
-            <p>Published in the Long River Review</p>
+            <p>Long River Review</p>
           </li>
         </ul>
       </section>

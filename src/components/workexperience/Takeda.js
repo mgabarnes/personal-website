@@ -7,7 +7,7 @@ function Takeda(props) {
   return (
     <div className="takeda">
       <h1> Community Consultant, IACUC Board Member </h1>
-      <p>2013 - 2019 · 6 years</p>
+      <p>2013 - 2019</p>
       <p>Takeda (formerly Shire) Pharmceuticals, Cambridge, MA · Self-employed</p>
       <img src={TakedaLogo} alt="Hq" className="logo-picture" />
       <p>Here's some information about the experience:</p>

@@ -7,8 +7,8 @@ function Stanford(props) {
   return (
     <div className="stanford">
       <h1> Stanford Continuing Education </h1>
-      <p>Length of Time...</p>
-      <p>Location...</p>
+      {/* <p>Length of Time...</p> */}
+      <p>Stanford University</p>
       <img src={StanfordLogo} alt="logo" className="logo-picture" />
       <p>Here's some information about the experience:</p>
       <ul>

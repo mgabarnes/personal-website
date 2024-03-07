@@ -6,9 +6,9 @@ function Syracuse(props) {
   const SyracuseUrl = "https://" + "www.syracuse.edu/";
   return (
     <div className="syracuse">
-      <h1> Syracuse </h1>
-      <p>Length of Time...</p>
-      <p>Location...</p>
+      <h1> S.I. Newhouse School of Public Communications </h1>
+      {/* <p>Length of Time...</p> */}
+      <p>Syracuse University</p>
       <img src={SyracuseLogo} alt="logo" className="logo-picture" />
       <p>Here's some information about the experience:</p>
       <ul>
