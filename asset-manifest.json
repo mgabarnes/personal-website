@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.05d3d3f0.css",
-    "main.js": "/static/js/main.845b9c2a.js",
+    "main.css": "/static/css/main.6b95f895.css",
+    "main.js": "/static/js/main.77651eb4.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/PalaisLogo.jpeg": "/static/media/PalaisLogo.b39ce10ac0473823e9b6.jpeg",
+    "static/media/photo2.jpg": "/static/media/photo2.2eb30b4b2fc3059ac88f.jpg",
+    "static/media/photo1.jpg": "/static/media/photo1.fed9f5ccff44d6ac74bd.jpg",
     "static/media/michaelabarnes.jpeg": "/static/media/michaelabarnes.c2ea400e01f2abb9ae9a.jpeg",
+    "static/media/photo3.jpg": "/static/media/photo3.87b4e73fd340c06fc846.jpg",
     "static/media/LexingtonLogo.jpeg": "/static/media/LexingtonLogo.0ca2f138a6294046a943.jpeg",
     "static/media/NiskayunaLogo.png": "/static/media/NiskayunaLogo.884af754716dacf42bef.png",
     "static/media/LRR-logo.jpeg": "/static/media/LRR-logo.188e1be5be5fc79d5739.jpeg",
@@ -15,12 +18,12 @@
     "static/media/GrubStreetLogo.svg": "/static/media/GrubStreetLogo.8138d5f5539185ad1c0708128cc15967.svg",
     "static/media/syracuse_horizontal_1Line.svg": "/static/media/syracuse_horizontal_1Line.127f097fab2afa31eddd4819f5c82e9b.svg",
     "index.html": "/index.html",
-    "main.05d3d3f0.css.map": "/static/css/main.05d3d3f0.css.map",
-    "main.845b9c2a.js.map": "/static/js/main.845b9c2a.js.map",
+    "main.6b95f895.css.map": "/static/css/main.6b95f895.css.map",
+    "main.77651eb4.js.map": "/static/js/main.77651eb4.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05d3d3f0.css",
-    "static/js/main.845b9c2a.js"
+    "static/css/main.6b95f895.css",
+    "static/js/main.77651eb4.js"
   ]
 }
