@@ -3,20 +3,30 @@
   right: 0;
   bottom: 0;
   padding: 10px 20px;
-  background-color: #f2f2f2; /* Light grey background */
-  color: #333; /* Dark grey text */
+  background-color: #f2f2f2;
+  color: #333;
   text-align: right;
   font-size: 14px;
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow to lift the footer */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .source-code a {
-  display: block; /* Each link on its own line */
-  color: #333; /* Dark grey text */
-  text-decoration: none; /* No underline */
-  margin: 2px 0; /* Small margin between the lines */
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin: 2px 0;
 }
 
 .source-code a:hover {
-  color: #007bff; /* Light blue on hover for a bit of interaction */
+  color: #007bff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .footer {
+    position: static; /* Make the footer flow with the content on mobile */
+    width: 100%; /* Ensure it spans the width of the screen */
+    text-align: center; /* Center-align the text for mobile aesthetics */
+  }
 }
