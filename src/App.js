@@ -7,8 +7,10 @@ import WorkExperience from "./components/WorkExperience";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Education from "./components/Education"
+import Footer from "./components/Footer"
 import "./globalStyles.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
 import StealingParis from "./components/projects/StealingParis";
 
 import Takeda from "./components/workexperience/Takeda";
@@ -43,7 +45,6 @@ function App() {
                   <Projects />
                   <WorkExperience />
                   <Education />
-                  {/* <Contact /> */}
                 </main>
               }
               index
@@ -151,6 +152,7 @@ function App() {
           </Routes>
         </div>
         <Contact />
+        <Footer />
       </Router>
     </div>
   );
