@@ -3,7 +3,7 @@ import "./Teacher.css";
 import LexingtonLogo from "../../assets/teacher/LexingtonLogo.jpeg";
 
 function Teacher(props) {
-  const TeacherUrl = "https://" + "www.lexingtonma.org/lhs/.org/";
+  const TeacherUrl = "https://www.lexingtonma.org/lhs/.org/";
   return (
     <div className="teacher">
       <h1> Substitute Teacher and Volunteer </h1>

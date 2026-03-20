@@ -3,7 +3,7 @@ import "./Syracuse.css";
 import SyracuseLogo from "../../assets/syracuse/syracuse_horizontal_1Line.svg";
 
 function Syracuse(props) {
-  const SyracuseUrl = "https://" + "www.syracuse.edu/";
+  const SyracuseUrl = "https://www.syracuse.edu/";
   return (
     <div className="syracuse">
       <h1> S.I. Newhouse School of Public Communications </h1>

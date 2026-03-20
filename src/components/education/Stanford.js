@@ -3,7 +3,7 @@ import "./Stanford.css";
 import StanfordLogo from "../../assets/stanford/StanfordLogo.png";
 
 function Stanford(props) {
-  const StanfordUrl = "https://" + "continuingstudies.stanford.edu/";
+  const StanfordUrl = "https://continuingstudies.stanford.edu/";
   return (
     <div className="stanford">
       <h1> Stanford Continuing Education </h1>

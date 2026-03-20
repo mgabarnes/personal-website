@@ -3,7 +3,7 @@ import "./HugoHouse.css";
 import HugoHouseLogo from "../../assets/hugohouse/HugoHouseLogo.png";
 
 function HugoHouse(props) {
-  const HugoHouseUrl = "https://" + "hugohouse.org/";
+  const HugoHouseUrl = "https://hugohouse.org/";
   return (
     <div className="hugohouse">
       <h1> Hugo House </h1>

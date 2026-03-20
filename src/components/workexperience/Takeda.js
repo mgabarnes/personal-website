@@ -3,7 +3,7 @@ import "./Takeda.css";
 import TakedaLogo from "../../assets/takeda/TakedaLogo.avif";
 
 function Takeda(props) {
-  const TakedaUrl = "https://" + "www.takeda.com/";
+  const TakedaUrl = "https://www.takeda.com/";
   return (
     <div className="takeda">
       <h1> Community Consultant, IACUC Board Member </h1>

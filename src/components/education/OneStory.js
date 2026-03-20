@@ -3,7 +3,7 @@ import "./OneStory.css";
 import OneStoryLogo from "../../assets/onestory/OneStoryLogo.svg";
 
 function OneStory(props) {
-  const OneStoryUrl = "https://" + "one-story.com/";
+  const OneStoryUrl = "https://one-story.com/";
   return (  
     <div className="onestory">
       <h1> One Story </h1>

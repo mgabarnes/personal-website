@@ -3,7 +3,7 @@ import "./GrubStreet.css";
 import GrubStreetLogo from "../../assets/grubstreet/GrubStreetLogo.svg";
 
 function GrubStreet(props) {
-  const GrubStreetUrl = "https://" + "www.grubstreet.org/";
+  const GrubStreetUrl = "https://www.grubstreet.org/";
   return (
     <div className="grubstreet">
       <h1> Grub Street </h1>

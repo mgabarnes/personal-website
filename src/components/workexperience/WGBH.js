@@ -3,7 +3,7 @@ import "./WGBH.css";
 import WGBHLogo from "../../assets/wgbh/WGBHLogo.png";
 
 function WGBH(props) {
-  const WGBHUrl = "https://" + "www.wgbh.org/";
+  const WGBHUrl = "https://www.wgbh.org/";
   return (
     <div className="wgbh">
       <h1> Field Producer, Frontline, NOVA, National Programming </h1>

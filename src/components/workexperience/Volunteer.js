@@ -3,7 +3,7 @@ import "./Volunteer.css";
 import NiskayunaLogo from "../../assets/volunteer/NiskayunaLogo.png";
 
 function Niskayuna(props) {
-  const NiskayunaUrl = "https://" + "www.niskayunaschools.org/";
+  const NiskayunaUrl = "https://www.niskayunaschools.org/";
   return (
     <div className="niskayuna">
       <h1> Volunteer </h1>

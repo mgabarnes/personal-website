@@ -3,7 +3,7 @@ import "./Palais.css";
 import PalaisLogo from "../../assets/palais/PalaisLogo.jpeg";
 
 function Palais(props) {
-  const PalaisUrl = "https://" + "int.strasbourg.eu/place/-/entity/sig/1004_CUL_155";
+  const PalaisUrl = "https://int.strasbourg.eu/place/-/entity/sig/1004_CUL_155";
   return (
     <div className="palais">
       <h1> Palais Universitaire</h1>

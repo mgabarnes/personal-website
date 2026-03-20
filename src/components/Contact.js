@@ -2,9 +2,9 @@ import React from "react";
 import "./Contact.css";
 
 function Contact() {
-  const personalEmail = "mgabarnes" + "@" + "gmail.com";
-  const linkedInUrl = "https://" + "www.linkedin.com" + "/in/michaela-barnes-41478295/";
-  const instagramURL = "https://" + "www.instagram.com" + "/mibarnesg/";
+  const personalEmail = "mgabarnes@gmail.com";
+  const linkedInUrl = "https://www.linkedin.com/in/michaela-barnes-41478295/";
+  const instagramURL = "https://www.instagram.com/mibarnesg/";
 
   return (
     <div className="contact-container">
