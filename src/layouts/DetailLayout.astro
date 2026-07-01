@@ -1,0 +1,137 @@
+---
+import type { ImageMetadata } from 'astro';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  kicker?: string | undefined;
+  meta?: string | undefined;
+  logo: ImageMetadata;
+  logoAlt: string;
+  url?: string | undefined;
+  urlLabel?: string | undefined;
+  body?: string | undefined;
+  backHref: string;
+  backLabel: string;
+}
+const {
+  title,
+  kicker,
+  meta,
+  logo,
+  logoAlt,
+  url,
+  urlLabel,
+  body,
+  backHref,
+  backLabel,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={[title, meta].filter(Boolean).join(' — ')}>
+  <article class="detail wrap">
+    <p class="back-link"><a href={backHref}>← {backLabel}</a></p>
+
+    <header class="detail-header">
+      <div class="detail-logo">
+        <img src={logo.src} width={logo.width} height={logo.height} alt={logoAlt} />
+      </div>
+      <div>
+        {kicker && <p class="kicker">{kicker}</p>}
+        <h1>{title}</h1>
+        {meta && <p class="detail-meta">{meta}</p>}
+      </div>
+    </header>
+
+    <hr class="rule" />
+
+    <div class="detail-body prose">
+      {body ? (
+        <p>{body}</p>
+      ) : (
+        <p class="placeholder">A fuller account of this chapter is on the way.</p>
+      )}
+      {url && (
+        <p class="detail-link">
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {urlLabel ?? 'Learn more'} →
+          </a>
+        </p>
+      )}
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .detail {
+    padding-top: var(--space-xl);
+    max-width: 46rem;
+  }
+  .back-link {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: var(--space-l);
+  }
+  .detail-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-l);
+    margin-bottom: var(--space-l);
+  }
+  .detail-logo {
+    flex: none;
+    width: 6.5rem;
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-s);
+    background: #fff;
+    border: 1px solid var(--color-paper-edge);
+    border-radius: var(--radius);
+  }
+  .detail-logo img {
+    max-width: 100%;
+    max-height: 4rem;
+    width: auto;
+    object-fit: contain;
+  }
+  .detail-header h1 {
+    font-size: var(--step-3);
+  }
+  .detail-meta {
+    color: var(--color-ink-soft);
+    margin-top: 0.3em;
+  }
+  .detail-body {
+    margin-top: var(--space-l);
+    max-width: 46rem;
+  }
+  .placeholder {
+    color: var(--color-ink-faint);
+    font-style: italic;
+  }
+  .detail-link {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  @media (max-width: 34rem) {
+    .detail-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-m);
+    }
+    .detail-logo {
+      width: 5rem;
+      height: 5rem;
+      padding: var(--space-xs);
+    }
+    .detail-logo img {
+      max-height: 3.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,27 @@
+---
+import DetailLayout from '../../layouts/DetailLayout.astro';
+import { experience } from '../../data/experience';
+
+export async function getStaticPaths() {
+  return experience.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const years = `${item.startYear}–${item.endYear ?? 'Present'}`;
+---
+
+<DetailLayout
+  title={item.role}
+  kicker={years}
+  meta={`${item.org} · ${item.location}`}
+  logo={item.logo}
+  logoAlt={`${item.org} logo`}
+  url={item.url}
+  urlLabel={`Visit ${item.org}`}
+  body={item.body}
+  backHref="/experience"
+  backLabel="All experience"
+/>

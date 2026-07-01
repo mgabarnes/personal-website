@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found" description="This page could not be found.">
+  <section class="notfound wrap">
+    <p class="kicker">Error 404</p>
+    <h1>This page has wandered off.</h1>
+    <p class="notfound-body">
+      The page you're looking for isn't here — perhaps it moved, or the link was
+      mistyped.
+    </p>
+    <p class="notfound-cta"><a href="/">← Back home</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-block: var(--space-3xl) var(--space-2xl);
+    max-width: 40rem;
+  }
+  .notfound h1 {
+    margin-block: var(--space-s) var(--space-m);
+  }
+  .notfound-body {
+    color: var(--color-ink-soft);
+    font-size: var(--step-1);
+  }
+  .notfound-cta {
+    margin-top: var(--space-l);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: var(--step--1);
+  }
+</style>

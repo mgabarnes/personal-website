@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'writing'>;
+}
+const { entry } = Astro.props;
+const { title, publication, date, dek } = entry.data;
+
+const dateLabel = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(date);
+---
+
+<article class="writing-card">
+  <p class="kicker meta-line">
+    {publication && <span>{publication}</span>}
+    <span class="dot" aria-hidden="true">·</span>
+    <time datetime={date.toISOString()}>{dateLabel}</time>
+  </p>
+  <h3 class="card-title">
+    <a href={`/writing/${entry.id}`}>{title}</a>
+  </h3>
+  {dek && <p class="card-dek">{dek}</p>}
+  <a href={`/writing/${entry.id}`} class="read-more">Read the piece →</a>
+</article>
+
+<style>
+  .writing-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    padding-block: var(--space-l);
+    border-top: 1px solid var(--color-paper-edge);
+  }
+  .meta-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--color-ink-faint);
+  }
+  .meta-line .dot {
+    color: var(--color-paper-edge);
+  }
+  .card-title {
+    font-size: var(--step-2);
+  }
+  .card-title a {
+    color: var(--color-ink);
+  }
+  .card-title a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .card-dek {
+    color: var(--color-ink-soft);
+    max-width: 60ch;
+    margin-top: var(--space-3xs);
+  }
+  .read-more {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-top: var(--space-2xs);
+    align-self: flex-start;
+  }
+  .read-more:hover {
+    text-decoration: none;
+  }
+</style>

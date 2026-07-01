@@ -1,0 +1,177 @@
+---
+// Site header: wordmark + primary nav. Active state via current pathname.
+// Mobile menu is CSS-only (<details>) — no client JS.
+import { site, nav } from '../data/site';
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="wordmark" aria-label={`${site.name} — home`}>
+      <span class="wordmark-name">{site.name}</span>
+      <span class="wordmark-role">{site.tagline}</span>
+    </a>
+
+    <details class="nav-shell">
+      <summary class="nav-toggle" aria-label="Toggle menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </summary>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          {nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class:list={['nav-link', { 'is-active': isActive(item.href) }]}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-paper-edge);
+    background: color-mix(in srgb, var(--color-paper) 88%, transparent);
+    backdrop-filter: saturate(120%) blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding-block: var(--space-s);
+  }
+
+  .wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    color: var(--color-ink);
+  }
+  .wordmark:hover {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  .wordmark-name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .wordmark-role {
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--color-ink-faint);
+    margin-top: 0.2em;
+  }
+
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-soft);
+    padding-block: var(--space-3xs);
+    border-bottom: 1px solid transparent;
+  }
+  .nav-link:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom-color: var(--color-accent);
+  }
+  .nav-link.is-active {
+    color: var(--color-ink);
+    border-bottom-color: var(--color-accent);
+  }
+
+  /* Toggle is hidden on desktop */
+  .nav-toggle {
+    display: none;
+  }
+
+  @media (max-width: 46rem) {
+    .nav-shell {
+      position: relative;
+    }
+    .nav-toggle {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs);
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--font-display);
+      font-size: var(--step--1);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--color-ink);
+    }
+    .nav-toggle::-webkit-details-marker {
+      display: none;
+    }
+    .nav-toggle-bar,
+    .nav-toggle-bar::before,
+    .nav-toggle-bar::after {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--color-ink);
+      position: relative;
+    }
+    .nav-toggle-bar::before {
+      position: absolute;
+      top: -6px;
+    }
+    .nav-toggle-bar::after {
+      position: absolute;
+      top: 6px;
+    }
+    .site-nav {
+      position: absolute;
+      right: 0;
+      top: calc(100% + var(--space-s));
+      background: var(--color-paper);
+      border: 1px solid var(--color-paper-edge);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 40px -20px rgba(43, 38, 33, 0.5);
+      padding: var(--space-s) var(--space-m);
+      min-width: 12rem;
+    }
+    .site-nav ul {
+      flex-direction: column;
+      gap: var(--space-s);
+    }
+    .nav-link {
+      border-bottom: none;
+    }
+    .nav-link.is-active {
+      border-bottom: none;
+      color: var(--color-accent);
+    }
+  }
+</style>

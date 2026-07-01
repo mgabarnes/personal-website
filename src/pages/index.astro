@@ -1,0 +1,210 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WritingCard from '../components/WritingCard.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import PhotoGallery from '../components/PhotoGallery.astro';
+import { site } from '../data/site';
+import { publishedExperience } from '../data/experience';
+import portrait from '../assets/michaelabarnes.jpeg';
+
+const writing = (await getCollection('writing', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const featured = writing.filter((w) => w.data.featured);
+const featuredWriting = (featured.length ? featured : writing).slice(0, 2);
+const recentExperience = publishedExperience.slice(0, 3);
+---
+
+<BaseLayout>
+  <!-- Hero -->
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="kicker">{site.role} · {site.tagline}</p>
+      <h1 class="hero-title">Michaela Barnes</h1>
+      <p class="hero-dek">
+        A writer of essays and short stories — on family, hunger, art, and the
+        long work of becoming oneself.
+      </p>
+      <div class="hero-cta">
+        <a href="/writing" class="btn">Read the writing</a>
+        <a href="/about" class="btn btn-quiet">About Michaela</a>
+      </div>
+    </div>
+    <figure class="hero-portrait">
+      <Image
+        src={portrait}
+        alt="Portrait of Michaela Barnes"
+        widths={[400, 640]}
+        sizes="(min-width: 56rem) 22rem, 60vw"
+        loading="eager"
+      />
+    </figure>
+  </section>
+
+  <!-- Featured writing -->
+  <section class="section wrap">
+    <div class="section-head">
+      <p class="kicker">Selected writing</p>
+      <a href="/writing" class="section-more">All writing →</a>
+    </div>
+    <div class="section-list">
+      {featuredWriting.map((entry) => <WritingCard entry={entry} />)}
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section wrap">
+    <div class="section-head">
+      <p class="kicker">Experience</p>
+      <a href="/experience" class="section-more">All experience →</a>
+    </div>
+    <div class="section-list">
+      {recentExperience.map((item) => <ExperienceCard item={item} />)}
+    </div>
+  </section>
+
+  <!-- Photography teaser -->
+  <section class="section wrap">
+    <div class="section-head">
+      <p class="kicker">Photography</p>
+      <a href="/photography" class="section-more">See the gallery →</a>
+    </div>
+    <p class="section-lede">Photographing what moves me.</p>
+    <PhotoGallery />
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta wrap">
+    <hr class="rule" />
+    <div class="contact-cta-inner">
+      <div>
+        <p class="kicker">Get in touch</p>
+        <p class="contact-cta-line">Have a note about the work? I'd love to hear it.</p>
+      </div>
+      <a href="/contact" class="btn">Contact →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    display: grid;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+  @media (min-width: 56rem) {
+    .hero {
+      grid-template-columns: 1fr 22rem;
+    }
+  }
+  .hero-title {
+    margin-block: var(--space-2xs) var(--space-m);
+    font-size: var(--step-4);
+  }
+  .hero-dek {
+    font-size: var(--step-1);
+    color: var(--color-ink-soft);
+    max-width: 40ch;
+    line-height: 1.45;
+  }
+  .hero-cta {
+    margin-top: var(--space-l);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+  }
+  .hero-portrait {
+    margin: 0;
+    padding: var(--space-xs);
+    background: var(--color-paper);
+    border: 1px solid var(--color-paper-edge);
+    box-shadow: 0 30px 60px -40px rgba(43, 38, 33, 0.6);
+    justify-self: center;
+  }
+  .hero-portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: var(--space-2xs) var(--space-m);
+    border: 1px solid var(--color-ink);
+    color: var(--color-ink);
+    border-radius: var(--radius);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    text-decoration: none;
+  }
+  .btn-quiet {
+    border-color: var(--color-paper-edge);
+    color: var(--color-ink-soft);
+  }
+  .btn-quiet:hover {
+    background: var(--color-paper-deep);
+    color: var(--color-ink);
+    border-color: var(--color-ink-faint);
+  }
+
+  /* Sections */
+  .section {
+    padding-top: var(--space-2xl);
+  }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding-bottom: var(--space-s);
+    border-bottom: 2px solid var(--color-ink);
+  }
+  .section-more {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+  }
+  .section-more:hover {
+    text-decoration: none;
+    color: var(--color-accent-deep);
+  }
+  .section-lede {
+    margin-block: var(--space-m) var(--space-l);
+    font-size: var(--step-1);
+    color: var(--color-ink-soft);
+  }
+
+  /* Contact CTA */
+  .contact-cta {
+    padding-top: var(--space-2xl);
+  }
+  .contact-cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding-top: var(--space-l);
+  }
+  .contact-cta-line {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    max-width: 24ch;
+    margin-top: var(--space-3xs);
+  }
+</style>
