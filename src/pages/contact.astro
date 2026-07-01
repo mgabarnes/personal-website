@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site, social } from '../data/site';
+---
+
+<BaseLayout
+  title="Contact"
+  description={`Get in touch with ${site.name}.`}
+>
+  <PageHeader
+    kicker="Say hello"
+    title="Contact"
+    lede="For writing, readings, or a note about the work — I'd love to hear from you."
+  />
+
+  <section class="wrap contact">
+    <p class="contact-email">
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+    </p>
+
+    <ul class="contact-links">
+      {social.map((s) => (
+        <li>
+          <span class="contact-label">{s.label}</span>
+          <a
+            href={s.href}
+            target={s.href.startsWith('http') ? '_blank' : undefined}
+            rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+          >
+            {s.handle}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact {
+    margin-top: var(--space-xl);
+    max-width: 40rem;
+  }
+  .contact-email {
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+  }
+  .contact-links {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+  }
+  .contact-links li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-m);
+    padding-bottom: var(--space-m);
+    border-bottom: 1px solid var(--color-paper-edge);
+  }
+  .contact-label {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--color-ink-faint);
+    min-width: 7rem;
+  }
+</style>

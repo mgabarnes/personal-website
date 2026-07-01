@@ -1,0 +1,77 @@
+---
+import type { Education } from '../data/education';
+
+interface Props {
+  item: Education;
+}
+const { item } = Astro.props;
+---
+
+<article class="entry-card">
+  <div class="entry-logo">
+    <img
+      src={item.logo.src}
+      width={item.logo.width}
+      height={item.logo.height}
+      alt={`${item.title} logo`}
+      loading="lazy"
+    />
+  </div>
+  <div class="entry-body">
+    <h3 class="entry-title">
+      <a href={`/education/${item.slug}`}>{item.title}</a>
+    </h3>
+    <p class="entry-meta">{item.context}</p>
+  </div>
+</article>
+
+<style>
+  .entry-card {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: var(--space-m);
+    align-items: center;
+    padding-block: var(--space-l);
+    border-top: 1px solid var(--color-paper-edge);
+  }
+  .entry-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    padding: var(--space-xs);
+    background: #fff;
+    border: 1px solid var(--color-paper-edge);
+    border-radius: var(--radius);
+  }
+  .entry-logo img {
+    max-height: 3.25rem;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+  .entry-title {
+    font-size: var(--step-1);
+    margin-bottom: 0.15em;
+  }
+  .entry-title a {
+    color: var(--color-ink);
+  }
+  .entry-title a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .entry-meta {
+    color: var(--color-ink-soft);
+    font-size: var(--step-0);
+  }
+  @media (max-width: 34rem) {
+    .entry-card {
+      grid-template-columns: 3.5rem 1fr;
+      gap: var(--space-s);
+    }
+    .entry-logo img {
+      max-height: 2.5rem;
+    }
+  }
+</style>

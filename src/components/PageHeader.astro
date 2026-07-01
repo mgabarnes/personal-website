@@ -1,0 +1,37 @@
+---
+// Editorial page header: kicker + title + optional lede, closed by a hairline.
+interface Props {
+  kicker?: string;
+  title: string;
+  lede?: string;
+}
+const { kicker, title, lede } = Astro.props;
+---
+
+<header class="page-header wrap">
+  {kicker && <p class="kicker">{kicker}</p>}
+  <h1>{title}</h1>
+  {lede && <p class="lede">{lede}</p>}
+  <hr class="rule" />
+</header>
+
+<style>
+  .page-header {
+    padding-top: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+  .page-header .kicker {
+    margin-bottom: var(--space-3xs);
+  }
+  .lede {
+    font-size: var(--step-1);
+    color: var(--color-ink-soft);
+    max-width: 52ch;
+    line-height: 1.4;
+  }
+  .page-header .rule {
+    margin-top: var(--space-m);
+  }
+</style>

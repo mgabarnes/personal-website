@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import WritingCard from '../../components/WritingCard.astro';
+
+const entries = (await getCollection('writing', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="Writing"
+  description="Published essays and short stories by Michaela Barnes."
+>
+  <PageHeader
+    kicker="Selected work"
+    title="Writing"
+    lede="Essays and short stories — published and forthcoming."
+  />
+
+  <section class="wrap writing-list">
+    {entries.map((entry) => <WritingCard entry={entry} />)}
+  </section>
+</BaseLayout>
+
+<style>
+  .writing-list {
+    margin-top: var(--space-l);
+    border-bottom: 1px solid var(--color-paper-edge);
+  }
+</style>

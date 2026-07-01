@@ -1,0 +1,25 @@
+---
+import DetailLayout from '../../layouts/DetailLayout.astro';
+import { education } from '../../data/education';
+
+export async function getStaticPaths() {
+  return education.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<DetailLayout
+  title={item.title}
+  meta={item.context}
+  logo={item.logo}
+  logoAlt={`${item.title} logo`}
+  url={item.url}
+  urlLabel="Learn more"
+  body={item.body}
+  backHref="/education"
+  backLabel="All education"
+/>

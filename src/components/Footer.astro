@@ -1,0 +1,87 @@
+---
+// Site footer: wordmark, social links, dynamic copyright year.
+import { site, social } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <hr class="rule" />
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">{site.name}</p>
+      <p class="footer-tagline">{site.tagline}</p>
+    </div>
+
+    <nav class="footer-social" aria-label="Social">
+      <ul>
+        {social.map((s) => (
+          <li>
+            <a
+              href={s.href}
+              target={s.href.startsWith('http') ? '_blank' : undefined}
+              rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              {s.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+
+  <p class="footer-copy wrap">
+    {site.name.toUpperCase()} © {year}. All rights reserved.
+  </p>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+  }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-l);
+    padding-top: var(--space-xl);
+  }
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+  }
+  .footer-tagline {
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-ink-faint);
+    margin-top: 0.3em;
+  }
+  .footer-social ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    padding: 0;
+    margin: 0;
+  }
+  .footer-social a {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-soft);
+  }
+  .footer-social a:hover {
+    color: var(--color-accent);
+  }
+  .footer-copy {
+    margin-top: var(--space-l);
+    font-size: var(--step--1);
+    letter-spacing: 0.1em;
+    color: var(--color-ink-faint);
+  }
+</style>

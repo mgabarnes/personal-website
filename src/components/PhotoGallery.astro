@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import { photos } from '../data/photos';
+---
+
+<div class="gallery">
+  {photos.map((photo, i) => (
+    <figure class="gallery-item">
+      <Image
+        src={photo.src}
+        alt={photo.alt}
+        widths={[400, 800, 1200]}
+        sizes="(min-width: 60rem) 33vw, (min-width: 40rem) 50vw, 100vw"
+        loading={i < 2 ? 'eager' : 'lazy'}
+      />
+      {photo.caption && <figcaption>{photo.caption}</figcaption>}
+    </figure>
+  ))}
+</div>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--space-m);
+  }
+  .gallery-item {
+    margin: 0;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius);
+    box-shadow: 0 18px 48px -28px rgba(43, 38, 33, 0.55);
+  }
+  figcaption {
+    margin-top: var(--space-2xs);
+    font-size: var(--step--1);
+    color: var(--color-ink-faint);
+    font-style: italic;
+  }
+</style>

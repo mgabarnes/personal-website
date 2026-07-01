@@ -1,0 +1,95 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import portrait from '../assets/michaelabarnes.jpeg';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: 'Writer',
+  url: site.url,
+  email: `mailto:${site.email}`,
+  sameAs: [
+    'https://www.instagram.com/mibarnesg/',
+    'https://www.linkedin.com/in/michaela-barnes-41478295/',
+  ],
+};
+---
+
+<BaseLayout title="About" description={site.description} jsonLd={jsonLd}>
+  <section class="about wrap">
+    <div class="about-text">
+      <p class="kicker">About</p>
+      <h1>Michaela Barnes</h1>
+      <div class="about-body flow">
+        <p>
+          I am a writer of essays and short stories. I earned a B.S. in
+          Television and Film Production from Syracuse University and worked as a
+          Field Producer in Public Television in Boston and San Francisco. I was
+          also an IACUC board member at Takeda Pharmaceuticals, and a substitute
+          elementary school teacher. I love to photograph what moves me, sculpt
+          the human figure, and find adventure.
+        </p>
+      </div>
+      <p class="about-cta">
+        <a href="/writing">Read the writing →</a>
+      </p>
+    </div>
+
+    <figure class="portrait">
+      <Image
+        src={portrait}
+        alt="Portrait of Michaela Barnes"
+        widths={[400, 700]}
+        sizes="(min-width: 52rem) 24rem, 80vw"
+        loading="eager"
+      />
+    </figure>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    padding-top: var(--space-2xl);
+    display: grid;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+  @media (min-width: 52rem) {
+    .about {
+      grid-template-columns: 1fr 24rem;
+      gap: var(--space-2xl);
+    }
+  }
+  .about-text h1 {
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-l);
+  }
+  .about-body {
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--color-ink);
+    max-width: 40ch;
+  }
+  .about-cta {
+    margin-top: var(--space-l);
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .portrait {
+    margin: 0;
+    padding: var(--space-xs);
+    background: var(--color-paper);
+    border: 1px solid var(--color-paper-edge);
+    box-shadow: 0 30px 60px -40px rgba(43, 38, 33, 0.6);
+  }
+  .portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+</style>
